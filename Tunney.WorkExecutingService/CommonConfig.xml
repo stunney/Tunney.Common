@@ -1,0 +1,40 @@
+﻿<configuration>
+  <components>
+
+    <!-- This file is retrieved through a network share on nb-stunney,  it is copied there when the service is rebuilt -->
+    <component id="IoCContainer"
+               service="Tunney.IoCContainer.IIoCContainer, Tunney.IoCContainer"
+               type="Tunney.IoCContainer.CastleWindsorContainer, Tunney.IoCContainer"/>
+
+    <!-- Logging -->
+    <component id="logger"
+         service="Tunney.IoCContainer.ILogger, Tunney.IoCContainer"
+         type="Tunney.IoCContainer.Log4NetLogger, Tunney.IoCContainer"
+         lifestyle="transient">
+      <parameters>
+        <!-- The value of the following node MUST match the value of a logger node in the log4net configuration, or all appenders will get ALL calls! -->
+        <_log4netLoggerName>Tunney.DefaultLogger</_log4netLoggerName>
+      </parameters>
+    </component>
+
+    <component id="quartz.scheduler.factory" service="Quartz.ISchedulerFactory, Quartz" type="Quartz.Impl.StdSchedulerFactory, Quartz" />
+
+    <component id="Listener_Standard_Scheduler"
+               service="Quartz.ISchedulerListener, Quartz"
+               type="Tunney.Scheduler.Utilities.StdSchedulerListener, Tunney.Scheduler.Utilities"
+               lifestyle="transient">
+      <parameters>
+        <_logger>${logger}</_logger>
+      </parameters>
+    </component>
+
+    <component id="Listener_Standard_Jobs"
+               service="Quartz.IJobListener, Quartz"
+               type="Tunney.Scheduler.Utilities.StdJobListener, Tunney.Scheduler.Utilities"
+               lifestyle="transient">
+      <parameters>
+        <_logger>${logger}</_logger>
+      </parameters>
+    </component>
+  </components>
+</configuration>

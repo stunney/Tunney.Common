@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<castle>
+  <components>
+    <!-- Logging -->
+    <component id="logger"
+         service="Tunney.Common.IoC.ILogger, Tunney.Common"
+         type="Tunney.Common.IoC.Log4NetLogger, Tunney.Common"
+         lifestyle="transient">
+      <parameters>
+        <!-- The value of the following node MUST match the value of a logger node in the log4net configuration, or all appenders will get ALL calls! -->
+        <_log4netLoggerName>Tunney.DefaultLogger</_log4netLoggerName>
+      </parameters>
+    </component>
+
+    <component id="IoCContainer"
+               service="Tunney.Common.IoC.IIoCContainer, Tunney.Common"
+               type="Tunney.Common.IoC.CastleWindsorContainer, Tunney.Common">
+      <parameters>
+        <_logger>${logger}</_logger>
+      </parameters>
+    </component>
+
+    <component id="myObjectID"
+               type="Tunney.Common.DictionaryWithInt32KeyAndListValue`1[[System.String, mscorlib]], Tunney.Common">
+      <parameters>
+        <_values>
+          <list>
+            <entry key="0">IoCContainer</entry>
+            <entry key="0">IoCContainer</entry>
+            <entry key="1">IoCContainer</entry>
+            <entry key="2">IoCContainer</entry>
+          </list>
+        </_values>
+      </parameters>
+    </component>
+  </components>
+</castle>

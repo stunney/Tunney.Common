@@ -1,0 +1,72 @@
+﻿<configuration>
+  <include uri="file://CommonConfig.xml" />
+  
+  <components>
+    <!--<component id="notifier_BizSysPagerEmailer"
+               service="Tunney.Notifiers.Email.IEmailer, Tunney.Notifiers"
+               type="Tunney.Notifiers.Email.SimpleSMTPEmailer, Tunney.Notifiers"
+               lifestyle="transient">
+      <parameters>
+        <_smtpServerName>#{standardSMTPServerAddress}</_smtpServerName>
+        <_fromAddress>noreply@Tunney.com</_fromAddress>
+        <_fromAlias>Sentry Mailer</_fromAlias>
+        <_recipentEmailAddresses>
+          <list>
+            --><!--<item>BizSysPager@moxymedia.com</item>--><!--
+            <item>stunney@Tunney.com</item>
+            <item>jisam@Tunney.com</item>
+          </list>
+        </_recipentEmailAddresses>
+      </parameters>
+    </component>-->
+
+    <!--<component id="sentryJobWatcherScheduler"
+               service="Tunney.Scheduler.Utilities.IJobScheduler, Tunney.Scheduler.Utilities"
+               type="Jobs.Sentry.JobScheduler_SentryDBWatcher, Jobs.Sentry"
+               lifestyle="transient">
+      <parameters>
+        <_sqlServerConnectionString>#{sentrydbconnectionstring}</_sqlServerConnectionString>
+        <_frequencyInSeconds>120</_frequencyInSeconds> --><!-- Two (2) minutes --><!--
+        <_jobRetryCount>3</_jobRetryCount>
+        <_clearJobOnStartup>false</_clearJobOnStartup>
+        <_emailer>${notifier_BizSysPagerEmailer}</_emailer>
+        <_logger>${logger}</_logger>
+        <_clearChildJobsOnStartup>false</_clearChildJobsOnStartup>
+      </parameters>
+    </component>-->               
+    
+    <component id="master_scheduler_starter"
+               service="Tunney.Scheduler.Utilities.IScheduleStarter, Tunney.Scheduler.Utilities"
+               type="Tunney.Scheduler.Utilities.StdSchedulerStarter, Tunney.Scheduler.Utilities"
+               lifestyle="singleton">
+      <parameters>
+        
+        <_iocContainer>${IoCContainer}</_iocContainer>
+        <_schedulerFactory>${quartz.scheduler.factory}</_schedulerFactory>
+
+        <_jobSchedulers>
+          <list>
+            <!--<item>${sentryJobWatcherScheduler}</item>-->
+            <item>FILLIN</item>
+          </list>
+        </_jobSchedulers>
+
+        <_jobListeners>
+          <list>
+            <item>${Listener_Standard_Jobs}</item>
+          </list>
+        </_jobListeners>
+
+        <_schedulerListeners>
+          <list>
+            <item>${Listener_Standard_Scheduler}</item>
+          </list>
+        </_schedulerListeners>
+
+        <_logger>${logger}</_logger>
+
+        <_emailer>FILLIN</_emailer>        
+      </parameters>
+    </component>
+  </components>
+</configuration>
