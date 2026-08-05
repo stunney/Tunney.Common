@@ -1,0 +1,95 @@
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# NuGet packages
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+tmp_nuget/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userprefs
+
+# Mono auto generated files
+mono_crash.*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Rider local history
+.history/
+
+# Publish outputs
+publish/
+
+# Package output
+*.nupkg
+*.snupkg
+
+# Resharper
+_ReSharper*/
+*.ReSharper*
+*.DotSettings.user
+
+#  Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Build logs
+*.log
+
+# IIS Express
+/.vs/
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# NuGet v3
+*.nuget.props
+*.nuget.targets
+
+# dotCover
+*.dotCover
+
+# Backup & report files from converting an old project file
+# to a newer format
+*.Backup
+*.UpgradeLog*
+
+# Others
+*.cache
+*.ide.*
+*.sublime-workspace
+*.sublime-project

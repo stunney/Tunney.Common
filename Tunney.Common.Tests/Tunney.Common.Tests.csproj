@@ -9,8 +9,8 @@
     <ProjectGuid>{4D00CEC3-4E55-4A44-AE50-713C04067140}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tsavo.Common.Tests</RootNamespace>
-    <AssemblyName>Tsavo.Common.Tests</AssemblyName>
+    <RootNamespace>Tunney.Common.Tests</RootNamespace>
+    <AssemblyName>Tunney.Common.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -105,7 +105,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Tunney.Common\Tunney.Common.csproj">
       <Project>{55F5BB69-6C61-43BE-B87F-CCE121E78FCF}</Project>
-      <Name>Tsavo.Common</Name>
+      <Name>Tunney.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

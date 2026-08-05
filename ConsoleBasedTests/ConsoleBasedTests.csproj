@@ -104,7 +104,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Tunney.Common\Tunney.Common.csproj">
       <Project>{55F5BB69-6C61-43BE-B87F-CCE121E78FCF}</Project>
-      <Name>Tsavo.Common</Name>
+      <Name>Tunney.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

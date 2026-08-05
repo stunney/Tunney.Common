@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tsavo.Common.Properties {
+namespace Tunney.Common.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,7 +26,7 @@ namespace Tsavo.Common.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=W2K8-SPS2-15;Initial Catalog=Automation_Statistics;Integrated Securit" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=;Initial Catalog=Automation_Statistics;Integrated Securit" +
             "y=True")]
         public string Automation_StatisticsConnectionString1 {
             get {

@@ -76,7 +76,7 @@ namespace Tunney.InMemoryDatabase.Tests
             Assert.IsNotNull(c3);
         }
 
-        protected const string TEST_SERVER_NAME = @"W2K8-SPS2-15";
+        protected const string TEST_SERVER_NAME = @".\SQLEXPRESS";
 
         //[TestMethod]
         //public void TestConnectionDisposed()
